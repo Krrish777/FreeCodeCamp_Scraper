@@ -63,7 +63,8 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "bookscraper.pipelines.BookscraperPipeline": 300,
+   "bookscraper.pipelines.BookscraperPipeline": 300, # Show the precedance in the items pipelines lower the number higher the precedance
+   'bookscraper.pipelines.saveToDatabasePipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
